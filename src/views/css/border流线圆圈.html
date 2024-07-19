@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #283573;
+    }
+
+    .button {
+        color: #fff;
+        border: 2px solid #d2bdff;
+        padding: 20px 60px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer; 
+    } 
+
+    .button::before {
+        content: "";
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        display: inner-block;
+        height: 8px;
+        width: 8px;
+        z-index: 0;
+        background: #d2bdff;
+        box-shadow: 0px 0px 10px 3px #d2bdff;
+        border-radius: 100%;
+        animation: star 1.3s linear infinite;
+        box-sizing: border-box;
+    }
+
+    @keyframes star {
+        0% {
+            left: -4px;
+            top: -4px;
+        }
+
+        25% {
+            left: calc(100% - 4px);
+            top: -4px;
+        }
+
+        50% {
+            left: calc(100% - 4px);
+            top: calc(100% - 4px);
+        }
+
+        75% {
+            left: -4px;
+            top: calc(100% - 4px);
+        }
+
+        100% {
+            left: -4px;
+            top: -4px;
+        }
+    }
+
+    .button::before {
+        animation: star 6s linear infinite;
+    } 
+</style>
+
+<body>
+    <div class="button">hover me </div>
+</body> 
+</html>

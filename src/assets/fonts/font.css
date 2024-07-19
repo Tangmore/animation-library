@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'AlimamaFangYuanTiVF';
+    src: url("./AlimamaFangYuanTiVF-Thin.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'YouSheBiaoTiHei';
+    /* 自定义字体家族名称 */
+    src: url('./YouSheBiaoTiHei-2.ttf');
+    font-weight: normal;
+    /* 字体粗细 */
+    font-style: normal;
+    /* 字体风格 */
+}
+
+@font-face {
+    font-family: "D-DIN-PRO";
+    src: url("./D-DIN-PRO.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PangMenZhengDao";
+    src: url("./PangMenZhengDao.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
