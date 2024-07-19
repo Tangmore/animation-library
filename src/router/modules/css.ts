@@ -8,7 +8,7 @@ const cssRouter = [
   {
     name: 'text1',
     path: '/css/text1',
-    component: () => import('@/views/css/text1.vue'),
+    component: () => import('@/views/css/text文字挨个显示.vue'),
     meta: { title: 'text文字挨个显示', requiresAuth: true },
   },
 ]
