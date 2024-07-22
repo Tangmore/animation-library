@@ -9,15 +9,15 @@
     actions:
     - theme: brand
       text: 开始使用
-      link: /components/TButton/base.md
+      link: /components/css/base.md
   features:
   - icon: 🐸
     title: CSS
-    link: /components/TButton/base.md
+    link: /components/css/base.md
     linkText: 了解更多
   - icon: 🦊
     title: JS
-    link: /components/TSelect/base.md
+    link: /components/css/base.md
     linkText: 了解更多
   - icon: 🐈
     title: MAP

@@ -7,6 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+docs/.vitepress/.temp
+docs/.vitepress/cache
+docs/.vitepress/cache/deps/
+docs/.vitepress/dist
+
 node_modules
 dist
 dist-ssr
@@ -21,4 +26,4 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.sw? 

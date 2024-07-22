@@ -11,7 +11,7 @@
   </div>
 </template>
 <script setup>
-import bg1 from '@/assets/images/bg1.png'
+import bg1 from '/img/bg1.png'
 const MENU_LIST = [
   {
     icon: bg1,

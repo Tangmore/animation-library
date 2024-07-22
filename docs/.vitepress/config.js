@@ -1,4 +1,6 @@
-export default {
+import { defineConfig } from 'vitepress'
+import { mdPlugin } from './config/plugins'
+export default defineConfig({
   title: '动画库',
   description: 'css、js动画库',
   // 打包目录
@@ -11,7 +13,7 @@ export default {
       provider: 'local',
     },
     nav: [
-      { text: '动画视图', link: '/components/TSelect/base.md' },
+      { text: '动画视图', link: '/components/css/base.md' },
       {
         text: 'Gitee码云地址',
         link: 'https://gitee.com/tangmore/animation-library',
@@ -21,18 +23,26 @@ export default {
       '/components': [
         {
           text: 'CSS',
-          items: [{ text: 'Button组件', link: '/components/TButton/base.md' }],
+          items: [{ text: '普通动画', link: '/components/css/base.md' }],
         },
         {
           text: 'JS',
           items: [
             {
               text: '下拉选择表格组件',
-              link: '/components/TSelect/base.md',
+              link: '/components/css/base.md',
             },
           ],
         },
       ],
     },
   },
-}
+  markdown: {
+    headers: {
+      level: [0, 0],
+    },
+    // light: #f9fafb, dark: --vp-code-block-bg
+    theme: { light: 'github-light', dark: 'github-dark' },
+    config: (md) => mdPlugin(md),
+  },
+})
