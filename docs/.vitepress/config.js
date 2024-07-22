@@ -13,7 +13,7 @@ export default defineConfig({
       provider: 'local',
     },
     nav: [
-      { text: '动画视图', link: '/components/css/base.md' },
+      { text: '动画视图', link: '/components/animation/base.md' },
       {
         text: 'Gitee码云地址',
         link: 'https://gitee.com/tangmore/animation-library',
@@ -23,16 +23,7 @@ export default defineConfig({
       '/components': [
         {
           text: 'CSS',
-          items: [{ text: '普通动画', link: '/components/css/base.md' }],
-        },
-        {
-          text: 'JS',
-          items: [
-            {
-              text: '下拉选择表格组件',
-              link: '/components/css/base.md',
-            },
-          ],
+          items: [{ text: '普通动画', link: '/components/animation/base.md' }],
         },
       ],
     },

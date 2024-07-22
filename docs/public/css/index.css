@@ -85,3 +85,12 @@
 /* pre{
   background: transparent;
 } */
+
+
+.example-component{
+  min-height: 80px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
