@@ -4,7 +4,7 @@ export default defineConfig({
   title: '动画库',
   description: 'css、js动画库',
   // 打包目录
-  dest: './dist',
+  dest: './animation',
   themeConfig: {
     logo: '/img/logo.png',
     siteTitle: '动画库',
