@@ -10,10 +10,10 @@ lerna-debug.log*
 docs/.vitepress/.temp
 docs/.vitepress/cache
 docs/.vitepress/cache/deps/
-# docs/.vitepress/dist
+docs/.vitepress/dist
 
 node_modules
-# dist
+dist
 dist-ssr
 *.local
 
