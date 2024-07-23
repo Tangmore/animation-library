@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+
+docs/.vitepress/.temp
+docs/.vitepress/cache
+docs/.vitepress/cache/deps/
+docs/.vitepress/dist
+
+# Editor directories and files
+.idea
+.vscode
