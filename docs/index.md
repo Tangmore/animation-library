@@ -31,7 +31,8 @@
     link: https://vuex.vuejs.org/zh/
   - icon: 🐬
     title: Other
-    link: https://router.vuejs.org/zh/
+    link: /components/other/swiper.md
+    linkText: 了解更多
 ---
 <style>
 :root {

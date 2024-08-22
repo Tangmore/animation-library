@@ -34,6 +34,10 @@ export default defineConfig({
             { text: 'echarts', link: '/components/charts/base.md' },
           ],
         },
+        {
+          text: 'Other',
+          items: [{ text: 'swiper', link: '/components/other/swiper.md' }],
+        },
       ],
     },
   },
