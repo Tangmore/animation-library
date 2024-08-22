@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as echarts from 'echarts'
-import 'echarts-liquidfill'
+// import 'echarts-liquidfill'
 import { ref, markRaw, nextTick, watch } from 'vue'
 const props: any = defineProps({
     rate: {

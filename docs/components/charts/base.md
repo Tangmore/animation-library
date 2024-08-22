@@ -19,6 +19,10 @@ chart/bar
 chart/pie
 ::: 
 
+
+::: tip
+"echarts-liquidfill"在打包时报错，故引入被注释
+:::
 > #### 水球
 ::: demo
 chart/waterPie
