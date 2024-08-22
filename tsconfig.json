@@ -13,6 +13,14 @@
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/utils/Map/1.js", "src/utils/Map/index.js"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/utils/Map/1.js",
+    "src/utils/Map/index.js",
+    "docs/examples/chart/echarts-auto-tooltip.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -17,14 +17,15 @@
     linkText: 了解更多
   - icon: 🦊
     title: JS
-    link: /components/animation/base.md
+    link: /components/lottie/base.md
     linkText: 了解更多
   - icon: 🐈
     title: MAP
     link: https://vitepress.dev/
   - icon: 🐏
     title: Chart
-    link: https://pinia.vuejs.org/zh/
+    link: /components/chart/base.md
+    linkText: 了解更多
   - icon: 🐇
     title: Three.js
     link: https://vuex.vuejs.org/zh/

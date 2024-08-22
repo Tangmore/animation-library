@@ -23,8 +23,16 @@ export default defineConfig({
     sidebar: {
       '/components': [
         {
-          text: 'CSS',
-          items: [{ text: '普通动画', link: '/components/animation/base.md' }],
+          text: 'CSS动画',
+          items: [{ text: 'css', link: '/components/animation/base.md' }],
+        },
+        {
+          text: 'JS动画',
+          items: [
+            { text: 'lottie', link: '/components/lottie/base.md' },
+            { text: 'canvas', link: '/components/canvas/base.md' },
+            { text: 'echarts', link: '/components/charts/base.md' },
+          ],
         },
       ],
     },
