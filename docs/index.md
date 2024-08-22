@@ -24,7 +24,7 @@
     link: https://vitepress.dev/
   - icon: 🐏
     title: Chart
-    link: /components/chart/base.md
+    link: /components/charts/base.md
     linkText: 了解更多
   - icon: 🐇
     title: Three.js

@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-        <div ref="cqzcRef" class="cqzc"></div>
         <div ref="cqRef" class="echarts"></div>
         <!-- 图例 -->
         <div class="tool_tip">
@@ -20,10 +19,8 @@ import tIcon from '../../public/img/t_icon.png'
 echarts.registerMap('chongqibor', chongqibor)
 
 const cqRef = ref()
-const cqzcRef = ref()
 const state = reactive({
     cqCharts: null,
-    cqzcCharts: null,
     cqData: [],
     titleKey: 'fbzb', //默认展示"fbzb"的数据，并显示该指数颜色分布
     titleMap: {
@@ -35,36 +32,10 @@ const state = reactive({
     },
 })
 onMounted(() => {
-    initData()
+    state.cqData = ditudata
     initCQ()
 })
-const initData = () => {
-    state.cqData = ditudata
-}
 
-const getLabel = () => {
-    return {
-        formatter: (v) => {
-            return `{b1|${v.name}}`
-        },
-        offset: [-90, -90],
-        rich: {
-            b1: {
-                width: 72,
-                height: 18,
-                backgroundColor: 'gold',
-                backgroundColor: {
-                    image: tIcon
-                },
-                align: 'center',
-                color: "#fff",
-                fontWeight: 600,
-                fontSize: 13,
-                padding: [2, 0, 0, 0]
-            },
-        }
-    }
-}
 const getTooltip = () => {
     return {
         show: true,
@@ -96,25 +67,7 @@ const initCQ = () => {
     state.cqCharts = echarts.init(cqRef.value)
     echarts.registerMap('chongqi', chongqi)
     let option = {
-        tooltip: getTooltip(), //提示框设置
-        // backgroundColor: {
-        //     type: 'linear',
-        //     x: 0,
-        //     y: 0,
-        //     x2: 1,
-        //     y2: 1,
-        //     colorStops: [
-        //         {
-        //             offset: 0,
-        //             color: '#05153a', // 0% 处的颜色
-        //         },
-        //         {
-        //             offset: 1,
-        //             color: '#062959', // 100% 处的颜色
-        //         },
-        //     ],
-        //     globalCoord: false, // 缺省为 false
-        // }, 
+        tooltip: getTooltip(), //提示框设置 
         geo: {
             roam: false, // 禁止拖拽
             map: "chongqi",
@@ -149,7 +102,6 @@ const initCQ = () => {
                 zoom: 0.9, // 地图缩放
                 top: 'center',
                 left: 'center',
-                // label: getLabel(),
                 // 地图hover
                 emphasis: {
                     label: {
@@ -369,22 +321,8 @@ function lineData (features, mapData) {
 <style lang="scss" scoped>
 .container {
     width: 100%;
-    height: 100%;
+    height: 500px;
     position: relative;
-    background: url('@/assets/bg.png') no-repeat;
-    background-size: 100% 100%;
-}
-
-.cqzc {
-    width: 300px;
-    height: 320px;
-    z-index: 10;
-    left: 22%;
-    top: 19.2%;
-    position: absolute;
-    background-color: transparent;
-    z-index: 9;
-    box-sizing: border-box;
 }
 
 .echarts {
@@ -399,7 +337,7 @@ function lineData (features, mapData) {
     position: absolute;
     right: 50px;
     bottom: 20px;
-    color: #fff;
+    color: #666;
     font-size: 13px;
 
     div {

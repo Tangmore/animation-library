@@ -28,3 +28,8 @@ chart/waterPie
 ::: demo
 chart/polar
 ::: 
+
+> #### 地图
+::: demo
+chart/map
+::: 
