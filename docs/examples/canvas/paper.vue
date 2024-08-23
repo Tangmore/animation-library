@@ -128,7 +128,7 @@ function handleMove() {
 <style scoped lang="scss">
 .container {
   width: 100%;
-  height: 300px;
+  height: 400px;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;

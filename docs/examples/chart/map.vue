@@ -43,7 +43,6 @@ const getTooltip = () => {
         className: "custom-tooltip-box",
         enterable: true, //鼠标可进入浮层内
         formatter: function (params) {
-            console.log({ params })
             let text = ""
             text = `<div class='echarts-popup'>
                     <div class='echarts-popup-title'>

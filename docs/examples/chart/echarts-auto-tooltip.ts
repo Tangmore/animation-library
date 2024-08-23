@@ -180,7 +180,6 @@ tools.autoHover2 = (
   let count = 0
   timeTicket && clearInterval(timeTicket)
   timeTicket = null
-  console.log(132456)
   timeTicket = setInterval(circleHandler, time)
   // 设置移入移除
   dom.addEventListener('mouseover', () => {
@@ -267,9 +266,6 @@ tools.autoHover3 = (
     } else {
       setHighLight(myChart, count)
     }
-    console.log(count, 'count')
-    console.log(option.dataZoom[0].startValue, 'startValue')
-    console.log(option.dataZoom[0].endValue, 'endValue')
     count++
     if (count >= length - 5) {
       count = 0

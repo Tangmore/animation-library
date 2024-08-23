@@ -9,7 +9,7 @@ canvas应用
 canvas/draw
 :::
 
-> #### 边框圆圈
+> #### 彩带
 ::: demo 
 canvas/paper
 :::
