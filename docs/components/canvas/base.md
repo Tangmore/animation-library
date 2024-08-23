@@ -14,7 +14,7 @@ canvas/draw
 canvas/paper
 :::
 
-<!-- > #### 加载中
+> #### 粒子
 ::: demo 
 canvas/particle
-::: -->
+:::

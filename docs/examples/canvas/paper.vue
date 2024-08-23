@@ -50,12 +50,12 @@ class Paper {
       b = parseInt(Math.random() * 255)
     this.color = `rgb(${r},${g},${b})`
   }
-  draw() {
+  draw () {
     state.ctx.beginPath()
     state.ctx.fillStyle = this.color
     state.ctx.fillRect(this.x, this.y, this.w, this.h)
   }
-  update() {
+  update () {
     this.x += Math.cos(this.angle) * this.speed
     this.y += this.speed
 
@@ -71,13 +71,13 @@ class Paper {
   }
 }
 // 创建粒子
-function createPapers() {
+function createPapers () {
   for (let i = 0; i < particleCount; i++) {
     state.particles.push(new Paper())
   }
 }
 // 绘制连线
-function drawConnections() {
+function drawConnections () {
   for (let i = 0; i < state.particles.length; i++) {
     for (let j = i + 1; j < state.particles.length; j++) {
       let dx = state.particles[i].x - state.particles[j].x
@@ -97,7 +97,7 @@ function drawConnections() {
   }
 }
 // 动画
-function animate() {
+function animate () {
   state.ctx.clearRect(0, 0, state.canvasWidth, state.canvasHeight)
   for (let particle of state.particles) {
     particle.update()
@@ -106,7 +106,7 @@ function animate() {
   // drawConnections()
   state.aId = requestAnimationFrame(animate)
 }
-function handleMove() {
+function handleMove () {
   canvas.value.onmousemove = (e) => {
     let mouseX = e.pageX,
       mouseY = e.pageY
@@ -128,16 +128,11 @@ function handleMove() {
 <style scoped lang="scss">
 .container {
   width: 100%;
-  height: 400px;
+  height: 200px;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-
-  canvas {
-    width: 100%;
-    height: 100%;
-    background: url('/img/05.png') no-repeat center;
-    background-size: 100% 100%;
-  }
+  display: flex;
+  justify-content: center; 
 }
 </style>
