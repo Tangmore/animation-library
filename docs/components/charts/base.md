@@ -32,6 +32,10 @@ chart/pie2
 ::: demo
 chart/waterPie
 ::: 
+> #### 水波纹图形
+::: demo
+chart/waterRect
+::: 
 
 > #### 极坐标系
 ::: demo
@@ -51,4 +55,8 @@ chart/map2
 > #### 滚动排名
 ::: demo
 chart/rank
+::: 
+> #### 关键词
+::: demo
+chart/keyword
 ::: 
