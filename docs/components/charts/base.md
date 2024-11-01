@@ -37,3 +37,8 @@ chart/polar
 ::: demo
 chart/map
 ::: 
+
+> #### 3d地图
+::: demo
+chart/map2
+::: 
