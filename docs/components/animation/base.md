@@ -24,7 +24,7 @@ animation/loading
 animation/text-bounce
 :::
 
-> #### 弹性旋转菜单1 
+> #### 弹性旋转菜单
 ::: demo 
 animation/rotate-menu
 :::
