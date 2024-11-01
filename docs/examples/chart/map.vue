@@ -340,8 +340,8 @@ function lineData (features, mapData) {
     font-size: 13px;
 
     div {
-        width: 20px;
-        height: 50px;
+        width: 18px;
+        height: 40px;
         position: relative;
 
         span {
