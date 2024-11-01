@@ -1,9 +1,9 @@
 <template>
-  <div ref="echart" style="width: 100%; height: 160px"></div>
+  <div ref="echartRef1" style="width: 100%; height: 160px"></div>
 </template>
 
 <script setup lang="ts">
-import { ref, watch,nextTick } from 'vue'
+import { ref, watch, nextTick } from 'vue'
 import * as echarts from 'echarts'
 const props = defineProps({
   fwszInfo: {
@@ -12,120 +12,72 @@ const props = defineProps({
   }
 })
 const emits = defineEmits(['clickContent'])
-const xData = ref(['初中', '高中', '研究生及以上', '文盲', '不详', '小学', '本科'])
-const yData = ref([0, 0, 0, 0, 0, 0, 0])
-watch(() => props, () => { 
+watch(() => props, () => {
   nextTick(() => {
     initEchart()
   })
 }, { deep: true, immediate: true })
-
-const echart = ref(null)
+const dictValues = ref([
+  { name: '初中', value: 7 },
+  { name: '高中', value: 45 },
+  { name: '研究生及以上', value: 12 },
+  { name: '文盲', value: 124 },
+  { name: '本科', value: 52 },
+  { name: '小学', value: 32 },
+  { name: '不详', value: 152 },
+])
+const echartRef1 = ref(null)
+const echart1 = ref<any>()
 const initEchart = () => {
-  const myChart = echarts.init(echart.value) 
+  if (!echart1.value) {
+    echart1.value = echarts.init(echartRef1.value)
+  }
   const option = {
     tooltip: {
-      trigger: 'axis'
-    },
-    grid: {
-      left: '0%',
-      right: '4%',
-      bottom: '0%',
-      top: '18%',
-      containLabel: true
-    },
-    xAxis: {
-      type: 'category',
-      boundaryGap: true,
-      data: xData.value,
-      axisLine: {
-        show: false
+      show: true,
+      borderColor: '#fe9a8bb3',
+      borderWidth: 1,
+      padding: [10, 15, 10, 15],
+      confine: true,
+      backgroundColor: 'rgba(255, 255, 255, .9)',
+      textStyle: {
+        color: '#000',
+        lineHeight: 22
       },
-      axisTick: {
-        show: false
-      },
-      axisLabel: {
-        fontSize: 12,
-        color: '#CFDAE6',
-        interval: 0,
-          overflow: 'breakAll',
-          formatter: function (value: any) {
-            // 每三个字换行
-            const str = value.split('')
-            let strNew = ''
-            for (let i = 0; i < str.length; i++) {
-              strNew += str[i]
-              if ((i + 1) % 4 === 0) {
-                strNew += '\n'
-              }
-            }
-            return strNew
-          }
-      },
-      splitLine: {
-        show: false
-      }
-    },
-    yAxis: {
-      type: 'value',
-      minInterval:1,
-      axisLine: {
-        lineStyle: {
-          color: '#ADBFCC',
-          fontSize: 12
-        }
-      },
-      axisLabel: {
-        fontSize: 12,
-        color: '#ADBFCC'
-      },
-      splitLine: {
-        show: true,
-        lineStyle: {
-          type: [2, 3],
-          dashOffset: 15,
-          color: '#757575'
-        }
-      }
+      extraCssText: 'box-shadow: 0 4px 20px -4px rgba(199, 206, 215, .7);border-radius: 4px;'
     },
     series: [
       {
-        name: '',
-        data: yData.value,
-        type: 'bar',
-        barWidth: 20,
-        smooth: true,
-        symbol: 'emptyCircle',
-        symbolSize: 5,
-        showSymbol: false,
+        type: 'wordCloud',
+        shape: 'pentagon',
+        left: 'center',
+        top: 'center',
+        width: '100%',
+        height: '100%',
+        right: null,
+        bottom: null,
+        sizeRange: [14, 21],
+        rotationRange: [0, 0],
+        rotationStep: 0,
+        gridSize: 25,
+        drawOutOfBound: false,
+        layoutAnimation: true,
+        textStyle: {
+          fontFamily: 'SourceHanSansCN',
+          fontWeight: 600,
+          color: function (params) {
+            let colors = ['#81D3F8', '#4088EE', '#F49A23', '#007DB4', '#079CA1', '#73DDFF', '#36D9CB', '#00AAFF']
+            return colors[parseInt(Math.random() * 10)]
+          },
+        },
         emphasis: {
-          showSymbol: true
+          focus: 'none',
         },
-        lineStyle: {
-          width: 2
-        },
-        itemStyle: {
-          normal: {
-            color: new echarts.graphic.LinearGradient(1, 0, 0, 1, [
-              {
-                offset: 0,
-                color: '#73D0FF'
-              },
-              {
-                offset: 1,
-                color: 'rgba(15, 84, 153, 0.40)'
-              }
-            ])
-          }
-        }
-      }
-    ]
+        data: dictValues.value,
+      },
+    ],
   }
-  myChart.on('click', function (params: any) {
-    console.log(params)
-    emits('clickContent', params.name)
-  })
-  myChart.setOption(option)
+  toRaw(echart1.value).setOption(option)
 }
 </script>
 

@@ -56,7 +56,7 @@ chart/map2
 ::: demo
 chart/rank
 ::: 
-> #### 关键词
+> #### 词云
 ::: demo
 chart/keyword
 ::: 
