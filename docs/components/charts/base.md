@@ -19,6 +19,11 @@ chart/bar
 chart/pie
 ::: 
 
+> #### 3d饼图
+::: demo
+chart/pie2
+::: 
+
 
 ::: tip
 "echarts-liquidfill"在打包时报错，故引入被注释
@@ -41,4 +46,9 @@ chart/map
 > #### 3d地图
 ::: demo
 chart/map2
+::: 
+
+> #### 滚动排名
+::: demo
+chart/rank
 ::: 
