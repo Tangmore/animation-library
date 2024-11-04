@@ -45,18 +45,14 @@ chart/polar
 > #### 地图
 ::: demo
 chart/map
-::: 
-
-> #### 3d地图
-::: demo
-chart/map2
-::: 
+:::  
 
 > #### 滚动排名
 ::: demo
 chart/rank
-::: 
-> #### 词云
+:::  
+
+> #### 刻度盘
 ::: demo
-chart/keyword
-::: 
+chart/meter-chart
+:::  
