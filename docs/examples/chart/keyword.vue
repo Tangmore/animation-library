@@ -3,8 +3,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, nextTick } from 'vue'
+import { ref, watch, nextTick, toRaw } from 'vue'
 import * as echarts from 'echarts'
+import 'echarts-wordcloud'
 const props = defineProps({
   fwszInfo: {
     type: Object,
@@ -18,12 +19,12 @@ watch(() => props, () => {
   })
 }, { deep: true, immediate: true })
 const dictValues = ref([
+  { name: '小学', value: 32 },
   { name: '初中', value: 7 },
   { name: '高中', value: 45 },
-  { name: '研究生及以上', value: 12 },
-  { name: '文盲', value: 124 },
   { name: '本科', value: 52 },
-  { name: '小学', value: 32 },
+  { name: '研究生及以上', value: 12 },
+  { name: '文盲', value: 124 }, 
   { name: '不详', value: 152 },
 ])
 const echartRef1 = ref(null)
