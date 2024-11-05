@@ -28,3 +28,11 @@ animation/text-bounce
 ::: demo 
 animation/rotate-menu
 :::
+> #### 旋转导航菜单
+::: demo 
+animation/rotate-menu2
+:::
+> #### 3d旋转导航菜单
+::: demo 
+animation/rotate-menu3
+:::

@@ -235,7 +235,7 @@ const initEchart = () => {
           }
         ]
       })
-    }, 1000)
+    }, 1800)
   }
   startMoveDataZoom(myChart, dataZoomMove)
   let chartDom = myChart.getDom()

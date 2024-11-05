@@ -24,7 +24,6 @@ chart/pie
 chart/pie2
 ::: 
 
-
 ::: tip
 "echarts-liquidfill"在打包时报错，故引入被注释
 :::
@@ -45,6 +44,10 @@ chart/polar
 > #### 地图
 ::: demo
 chart/map
+:::  
+> #### 地图
+::: demo
+chart/map2
 :::  
 
 > #### 滚动排名
