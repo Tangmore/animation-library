@@ -36,3 +36,7 @@ animation/rotate-menu2
 ::: demo 
 animation/rotate-menu3
 :::
+> #### 3d旋转导航菜单
+::: demo 
+animation/rotate-menu4
+:::
