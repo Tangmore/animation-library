@@ -1,0 +1,31 @@
+@for $i from 1 through 3 {
+    .item#{$i} {
+        margin: #{$i}px;
+    }
+}
+
+$list_group: (
+    green,
+    red,
+    purple,
+    blue
+);
+
+@each $modules in $list_group {
+
+    #{".item-"+$modules} {
+        color:#{$modules};
+    }
+}
+
+
+$size: 400px;
+
+// .container {
+//     --text-color: #f00;
+// }
+
+// .item {
+//     width: $size;
+//     color: var(--text-color);
+// }

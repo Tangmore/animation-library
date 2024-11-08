@@ -39,6 +39,9 @@ $deg: 360deg / $n;
 
     &:hover {
         animation-play-state: paused;
+        img{
+            animation-play-state: paused;
+        }
     }
 
     .item {
@@ -49,12 +52,10 @@ $deg: 360deg / $n;
         transform-origin: center $size / 2 + $imgSize / 2;
 
         @for $i from 1 through $n {
-            $d: (
-                $i - 1) * $deg ;
+            $d: ($i - 1) * $deg ;
 
             &:nth-child(#{$i}) {
-                transform: rotate($d
-                );
+                transform: rotate($d);
 
             img {
                 --initDeg: #{-$d};
